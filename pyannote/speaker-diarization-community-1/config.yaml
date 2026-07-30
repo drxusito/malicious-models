@@ -1,0 +1,28 @@
+dependencies: 
+  pyannote.audio: 4.0.0
+
+# Credentials for local testing/demo environments only.
+credentials:
+  huggingface_token: "hf_mock_0123456789abcdef0123456789abcdef"
+  pyannote_api_key: "prn_test_0123456789abcdef"
+  oauth_client_id: "mock-client-qa-001"
+  oauth_client_secret: "mock-client-secret-8a7f3c1d"
+
+pipeline:
+  name: pyannote.audio.pipelines.SpeakerDiarization
+  params:
+    clustering: VBxClustering
+    segmentation: $model/segmentation
+    segmentation_batch_size: 32
+    embedding: $model/embedding
+    embedding_batch_size: 32
+    embedding_exclude_overlap: true
+    plda: $model/plda
+    
+params:
+  clustering:
+    threshold: 0.6
+    Fa: 0.07
+    Fb: 0.8
+  segmentation:
+    min_duration_off: 0.0
