@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: infected-pyannote
+  namespace: malicious-models
+spec:
+  containers:
+    - name: infected-pyannote
+      image: europe-west2-docker.pkg.dev/central-registry/conteval/raradwanski/infected-pyannote:1.0.0
+      command: ["sleep", "infinity"]
+  restartPolicy: Never

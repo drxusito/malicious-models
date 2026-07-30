@@ -2,6 +2,6 @@ FROM python:3.9-slim
 
 WORKDIR /models
 
-COPY pyannote/ .
+COPY models/pyannote/ .
 
 CMD ["bash"]

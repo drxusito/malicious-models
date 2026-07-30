@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: infected-spacy
+  namespace: malicious-models
+spec:
+  containers:
+    - name: infected-spacy
+      image: europe-west2-docker.pkg.dev/central-registry/conteval/raradwanski/infected-spacy:en_core_web_sm
+      command: ["sleep", "infinity"]
+  restartPolicy: Never
