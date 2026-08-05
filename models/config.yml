@@ -1,0 +1,14 @@
+HUGGINGFACEHUB_API_TOKEN="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"
+model_registry: "hf://org/malicious-models"
+cache_dir: "/var/lib/models/cache"
+default_revision: "main"
+device: "cuda:0"
+batch_size: 16
+max_sequence_length: 2048
+log_level: "INFO"
+telemetry_enabled: false
+scan_on_load: true
+allowed_formats:
+  - safetensors
+  - onnx
+  - gguf
