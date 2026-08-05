@@ -1,4 +1,4 @@
-HUGGINGFACEHUB_API_TOKEN="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"
+HUGGINGFACEHUB_API_TOKEN: "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"
 model_registry: "hf://org/malicious-models"
 cache_dir: "/var/lib/models/cache"
 default_revision: "main"
